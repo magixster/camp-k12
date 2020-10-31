@@ -1,0 +1,62 @@
+@import '../../styles/base';
+
+.feedsWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: $primary-feed-bg;
+}
+
+.bg {
+  height: 10.75rem;
+  box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.08);
+  background-color: #2564ee;
+  position: relative;
+  padding: $feed-card-padding;
+}
+
+.feedsContainer {
+  flex:1;
+  background-color: $primary-feed-bg;
+  overflow: auto;
+  padding: $feed-card-padding;
+  margin-top: 12rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.563rem;
+
+    &_title {
+      @include header1-text;
+    }
+
+    &_title2 {
+      @include header2-text;
+    }
+  }
+
+  &__postInputContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    border: solid 0.5px $textarea-border-color;
+    margin-top: 1.188rem;
+  }
+
+  &__postInput {
+    border-radius: pxToRem(12px);
+    border-color: $textarea-border-color;
+    height: 8.813rem;
+    padding: pxToRem(10px);
+    margin-bottom: 1.375rem;
+    margin-top: 1rem;
+
+    &_submitBtn {
+      @include secondaryBtn;
+      align-self: flex-end;
+    }
+  }
+}
