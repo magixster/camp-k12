@@ -1,0 +1,69 @@
+@import '../../../styles/base';
+
+.signInContainer {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    &_title {
+      @include primaryText;
+      padding-top: 4.75rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &_title2 {
+      @include secondaryText;
+      padding-bottom: 2.75rem;
+    }
+  }
+
+  &__link {
+    text-align: center;
+    margin-top: 6rem;
+
+    &_label {
+      @include secondaryText;
+    }
+
+    &_text {
+      @include linkText;
+    }
+  }
+
+  &__form {
+    &_forgotPassword {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: $primary-text-color;
+      margin-bottom: 1.5rem;
+    }
+
+    &_passwordInput {
+      margin-bottom: 1rem;
+    }
+
+    &_formError {
+      // height: 2.188rem;
+      text-align: center;
+      @include primary-post-text;
+      line-height: 2.188rem;
+      margin: 0 -32px;
+      margin-bottom: 1.313rem;
+
+      &_hasError {
+      background: $primary-error-bg;
+      }
+    }
+
+    &_submitBtn {
+      @include primaryBtn;
+    }
+  }
+}
+
+.signUpContainer {
+  &_fullName {
+    margin-bottom: 1.635rem;
+  }
+}
