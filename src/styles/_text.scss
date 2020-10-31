@@ -1,0 +1,49 @@
+@import './variables';
+
+@mixin primaryText {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: $primary-text-color;
+}
+
+@mixin secondaryText {
+  font-size: 1rem;
+  color: $primary-text-color;
+  opacity: 0.7;
+}
+
+@mixin tertiaryText {
+  color: $primary-text-color;
+  opacity: 0.7;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@mixin linkText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #177cf4;
+}
+
+@mixin primary-post-text {
+  font-size: 0.875rem;
+  letter-spacing: 1.02px;
+  color: $error-text-color;
+}
+
+@mixin header1-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: $white-color;
+}
+
+@mixin header2-text {
+  font-size: 1.25rem;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color:$white-color;
+}
+

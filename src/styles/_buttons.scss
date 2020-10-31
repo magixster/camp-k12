@@ -1,0 +1,42 @@
+@mixin primaryBtn {
+  width: auto;
+  // height: 2.5rem;
+  border-radius: 20px;
+  background-color: #2665ee;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2.46px;
+  border: none;
+  text-align: center;
+  padding: pxToRem(14px) pxToRem(40px);
+}
+
+@mixin primaryDisabledBtn {
+  width: 11.625rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  text-transform: uppercase;
+}
+
+@mixin secondaryBtn {
+  border-radius: 5px;
+  background-color: #2665ee;
+  text-transform: uppercase;
+  color: $white-color;
+  font-weight: bold;
+  border: none;
+  width: fit-content;
+  padding: 0.438rem 0.75rem;
+}
+
+@mixin secondaryDisabledBtn {
+  width: 4.313rem;
+  height: 1.813rem;
+  border-radius: 20px;
+  background-color: #cccccc;
+  cursor: not-allowed;
+  text-transform: uppercase;
+}
