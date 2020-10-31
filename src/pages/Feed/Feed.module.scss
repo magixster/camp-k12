@@ -53,10 +53,20 @@
     padding: pxToRem(10px);
     margin-bottom: 1.375rem;
     margin-top: 1rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+
+    &:focus, &:focus{
+      outline: none;
+  }
 
     &_submitBtn {
       @include secondaryBtn;
       align-self: flex-end;
+
+      &_disabled {
+        background: $textarea-border-color;
+      }
     }
   }
 }
