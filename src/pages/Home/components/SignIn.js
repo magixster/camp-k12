@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import FormComponent from "../../../components/FormComponent";
 import { Link, withRouter } from "react-router-dom";
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
 import styles from "./common.module.scss";
 import { USER_LIST } from "../../../devData/users";
+import { userSignInSuccess } from "../modules";
 
-const SignInForm = ({ history }) => {
+const SignInForm = ({ history, dispatch }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formError, setFormError] = useState('');
@@ -25,6 +28,7 @@ const SignInForm = ({ history }) => {
         setFormError('Incorrect Password!');
         return;
       };
+      dispatch(userSignInSuccess(user));
       history.push('/feeds');
     }
   }
@@ -63,14 +67,14 @@ const SignInForm = ({ history }) => {
   );
 };
 
-const SignIn = ({ history }) => {
+const SignIn = ({ history, dispatch }) => {
   return (
     <div className={styles.signInContainer}>
       <span className={styles.signInContainer__header_title}>Sign in</span>
       <span className={styles.signInContainer__header_title2}>
         Welcome back
       </span>
-      <SignInForm history={history} />
+      <SignInForm dispatch={dispatch} history={history} />
       <div className={styles.signInContainer__link}>
         <span>
           <span className={styles.signInContainer__link_label}>
@@ -85,4 +89,7 @@ const SignIn = ({ history }) => {
   );
 };
 
-export default withRouter(SignIn);
+export default compose(
+  connect(),
+  withRouter
+)(SignIn);
