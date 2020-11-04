@@ -28,21 +28,6 @@
   color: #61dafb;
 }
 
-<<<<<<< HEAD
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-=======
 .switch-wrapper {
   position: relative;
 }
-
-/* .switch-wrapper > div {
-  position: absolute;
-} */
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600

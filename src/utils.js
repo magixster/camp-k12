@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { DUMMY_USER_IMAGES } from './constants';
-
-export const randomUser = () =>
-  DUMMY_USER_IMAGES[Math.floor(Math.random() * DUMMY_USER_IMAGES.length)];
-=======
 export const timeSince = (date) => {
   var seconds = Math.floor((new Date() - date) / 1000);
 
@@ -30,4 +24,3 @@ export const timeSince = (date) => {
   }
   return Math.floor(seconds) + "s";
 }
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600

@@ -2,11 +2,7 @@ export const USER_LIST = [
   {
     "id": 1,
     "password": 'test',
-<<<<<<< HEAD
-    "name": "Leanne Graham",
-=======
     "name": "Test user",
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
     "username": "Bret",
     "email": "test@test.com",
     "address": {
@@ -25,15 +21,11 @@ export const USER_LIST = [
       "name": "Romaguera-Crona",
       "catchPhrase": "Multi-layered client-server neural-net",
       "bs": "harness real-time e-markets"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/6.jpg",
     coins: 300,
     stage: 43,
     last_updated: '5h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 2,
@@ -57,15 +49,11 @@ export const USER_LIST = [
       "name": "Deckow-Crist",
       "catchPhrase": "Proactive didactic contingency",
       "bs": "synergize scalable supply-chains"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/21.jpg",
     coins: 300,
     stage: 43,
     last_updated: '24h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 3,
@@ -89,15 +77,11 @@ export const USER_LIST = [
       "name": "Romaguera-Jacobson",
       "catchPhrase": "Face to face bifurcated interface",
       "bs": "e-enable strategic applications"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/9.jpg",
     coins: 300,
     stage: 43,
     last_updated: '8d'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 4,
@@ -121,15 +105,11 @@ export const USER_LIST = [
       "name": "Robel-Corkery",
       "catchPhrase": "Multi-tiered zero tolerance productivity",
       "bs": "transition cutting-edge web services"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/34.jpg",
     coins: 300,
     stage: 43,
     last_updated: '3h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 5,
@@ -153,15 +133,11 @@ export const USER_LIST = [
       "name": "Keebler LLC",
       "catchPhrase": "User-centric fault-tolerant solution",
       "bs": "revolutionize end-to-end systems"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/4.jpg",
     coins: 300,
     stage: 43,
     last_updated: '4d'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 6,
@@ -185,15 +161,11 @@ export const USER_LIST = [
       "name": "Considine-Lockman",
       "catchPhrase": "Synchronised bottom-line interface",
       "bs": "e-enable innovative applications"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/3.jpg",
     coins: 300,
     stage: 43,
     last_updated: '7h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 7,
@@ -217,15 +189,11 @@ export const USER_LIST = [
       "name": "Johns Group",
       "catchPhrase": "Configurable multimedia task-force",
       "bs": "generate enterprise e-tailers"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/44.jpg",
     coins: 300,
     stage: 43,
     last_updated: '5h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 8,
@@ -249,15 +217,11 @@ export const USER_LIST = [
       "name": "Abernathy Group",
       "catchPhrase": "Implemented secondary concept",
       "bs": "e-enable extensible e-tailers"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/41.jpg",
     coins: 300,
     stage: 43,
     last_updated: '5h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 9,
@@ -281,15 +245,11 @@ export const USER_LIST = [
       "name": "Yost and Sons",
       "catchPhrase": "Switchable contextually-based project",
       "bs": "aggregate real-time technologies"
-<<<<<<< HEAD
-    }
-=======
     },
     img: "https://randomuser.me/api/portraits/men/12.jpg",
     coins: 300,
     stage: 43,
     last_updated: '5h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   },
   {
     "id": 10,
@@ -313,14 +273,10 @@ export const USER_LIST = [
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
-<<<<<<< HEAD
-    }
-=======
     },
       img: "https://randomuser.me/api/portraits/men/6.jpg",
       coins: 300,
       stage: 43,
       last_updated: '5h'
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   }
 ];
