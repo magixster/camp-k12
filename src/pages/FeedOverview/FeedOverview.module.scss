@@ -17,10 +17,9 @@
 
 .feedsContainer {
   flex:1;
-  background-color: $primary-feed-bg;
   overflow: auto;
   padding: $feed-card-padding;
-  margin-top: 12rem;
+  margin-top: 1.25rem;
 
   &__header {
     display: flex;

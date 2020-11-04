@@ -2,7 +2,7 @@ export const USER_LIST = [
   {
     "id": 1,
     "password": 'test',
-    "name": "Leanne Graham",
+    "name": "Test user",
     "username": "Bret",
     "email": "test@test.com",
     "address": {
@@ -21,7 +21,11 @@ export const USER_LIST = [
       "name": "Romaguera-Crona",
       "catchPhrase": "Multi-layered client-server neural-net",
       "bs": "harness real-time e-markets"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/6.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '5h'
   },
   {
     "id": 2,
@@ -45,7 +49,11 @@ export const USER_LIST = [
       "name": "Deckow-Crist",
       "catchPhrase": "Proactive didactic contingency",
       "bs": "synergize scalable supply-chains"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/21.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '24h'
   },
   {
     "id": 3,
@@ -69,7 +77,11 @@ export const USER_LIST = [
       "name": "Romaguera-Jacobson",
       "catchPhrase": "Face to face bifurcated interface",
       "bs": "e-enable strategic applications"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/9.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '8d'
   },
   {
     "id": 4,
@@ -93,7 +105,11 @@ export const USER_LIST = [
       "name": "Robel-Corkery",
       "catchPhrase": "Multi-tiered zero tolerance productivity",
       "bs": "transition cutting-edge web services"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/34.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '3h'
   },
   {
     "id": 5,
@@ -117,7 +133,11 @@ export const USER_LIST = [
       "name": "Keebler LLC",
       "catchPhrase": "User-centric fault-tolerant solution",
       "bs": "revolutionize end-to-end systems"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/4.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '4d'
   },
   {
     "id": 6,
@@ -141,7 +161,11 @@ export const USER_LIST = [
       "name": "Considine-Lockman",
       "catchPhrase": "Synchronised bottom-line interface",
       "bs": "e-enable innovative applications"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/3.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '7h'
   },
   {
     "id": 7,
@@ -165,7 +189,11 @@ export const USER_LIST = [
       "name": "Johns Group",
       "catchPhrase": "Configurable multimedia task-force",
       "bs": "generate enterprise e-tailers"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/44.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '5h'
   },
   {
     "id": 8,
@@ -189,7 +217,11 @@ export const USER_LIST = [
       "name": "Abernathy Group",
       "catchPhrase": "Implemented secondary concept",
       "bs": "e-enable extensible e-tailers"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/41.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '5h'
   },
   {
     "id": 9,
@@ -213,7 +245,11 @@ export const USER_LIST = [
       "name": "Yost and Sons",
       "catchPhrase": "Switchable contextually-based project",
       "bs": "aggregate real-time technologies"
-    }
+    },
+    img: "https://randomuser.me/api/portraits/men/12.jpg",
+    coins: 300,
+    stage: 43,
+    last_updated: '5h'
   },
   {
     "id": 10,
@@ -237,6 +273,10 @@ export const USER_LIST = [
       "name": "Hoeger LLC",
       "catchPhrase": "Centralized empowering task-force",
       "bs": "target end-to-end models"
-    }
+    },
+      img: "https://randomuser.me/api/portraits/men/6.jpg",
+      coins: 300,
+      stage: 43,
+      last_updated: '5h'
   }
 ];

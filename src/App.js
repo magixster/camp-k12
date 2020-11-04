@@ -3,6 +3,7 @@ import { AnimatedSwitch } from "react-router-transition";
 
 import Home from "./pages/Home";
 import Feed from "./pages/Feed";
+import FeedOverview from "./pages/FeedOverview";
 import Page404 from "./pages/Page404";
 import SignUp from "./pages/Home/components/SignUp";
 
@@ -17,6 +18,11 @@ const HomePage = (props) => (
 const FeedPage = (props) => (
   <ErrorBoundary>
     <Feed {...props} />
+  </ErrorBoundary>
+);
+const FeedOverviewPage = (props) => (
+  <ErrorBoundary>
+    <FeedOverview {...props} />
   </ErrorBoundary>
 );
 const SignUpPage = (props) => (
@@ -35,8 +41,9 @@ function App() {
         className='switch-wrapper'
       >
         <Route exact path='/' component={HomePage} />
-        <Route path='/feeds/' component={FeedPage} />
-        <Route path='/signUp/' component={SignUpPage} />
+        <Route exact path='/feeds/' component={FeedPage} />
+        <Route exact path='/feeds/:feedId' component={FeedOverviewPage} />
+        <Route exact path='/signUp/' component={SignUpPage} />
         <Route component={Page404} />
       </AnimatedSwitch>
     </Router>

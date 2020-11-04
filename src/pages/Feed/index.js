@@ -6,6 +6,7 @@ import styles from "./Feed.module.scss";
 import PostFeed from "./components/PostFeed";
 import { randomUser } from "../../utils";
 import { userSignout } from "../Home/modules";
+import { USER_LIST } from "../../devData/users";
 
 const PostInput = ({ userPost, setUserPost, createNewPost, disabled }) => {
   return (
@@ -34,11 +35,10 @@ const PostInput = ({ userPost, setUserPost, createNewPost, disabled }) => {
   );
 };
 
-const Feed = ({ dispatch, history, feedList, user }) => {
+const Feed = ({ dispatch, history, feedList }) => {
   useEffect(() => {
     dispatch(getUserFeed());
   }, []);
-
   const [userPost, setUserPost] = useState("");
 
   return (
@@ -49,7 +49,7 @@ const Feed = ({ dispatch, history, feedList, user }) => {
           {true && (
             <span
               onClick={() => {
-                dispatch(userSignout(user));
+                dispatch(userSignout());
                 history.push("/");
               }}
               className={styles.feedsContainer__header_title2}
@@ -67,7 +67,11 @@ const Feed = ({ dispatch, history, feedList, user }) => {
       </div>
       <div className={styles.feedsContainer}>
         {feedList.map((feed) => (
-          <PostFeed user={user} key={feed.id} feed={feed} />
+          <PostFeed
+            onClick={() => {
+              history.push(`/feeds/${feed.id}`);
+            }}
+          user={USER_LIST[feed.userId - 1]} key={feed.id} feed={feed} />
         ))}
       </div>
     </div>
@@ -76,7 +80,6 @@ const Feed = ({ dispatch, history, feedList, user }) => {
 
 const mapStateToProps = ({ feeds }) => ({
   feedList: feeds.userFeeds.feeds,
-  user: randomUser(),
 });
 
 export default connect(mapStateToProps)(Feed);

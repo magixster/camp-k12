@@ -3,8 +3,8 @@ import styles from "./PostFeed.module.scss";
 import dollarImage from "../../../assets/images/dollar.svg";
 import badgeImage from "../../../assets/images/badge.svg";
 
-const PostFeed = ({ feed: { body }, user }) => (
-  <div className={styles.postContainer}>
+const PostFeed = ({ feed: { body, last_updated }, user, onClick }) => (
+  <div className={styles.postContainer} onClick={onClick}>
     <div className={styles.postContainer__header}>
       <img
         className={styles.postContainer__profileImg}
@@ -18,7 +18,7 @@ const PostFeed = ({ feed: { body }, user }) => (
         <img height={15} width={15} src={dollarImage} alt='dollar' />
         <span style={{ marginLeft: "4px" }}>{user.coins}</span>
       </div>
-      <span>{user.last_updated}</span>
+      <span>{last_updated || user.last_updated}</span>
     </div>
     <div className={styles.postContainer__body}>{body}</div>
   </div>
