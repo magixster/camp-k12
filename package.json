@@ -2,7 +2,7 @@
   "name": "campk12",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://magixster.github.io/campk12",
+  "homepage": "http://magixster.github.io/camp-k12",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

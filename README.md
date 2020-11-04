@@ -6,11 +6,11 @@ password: test
 
 ## Available Pages
 
-[X] login
-[X] sign up
-[X] post on the timeline
-[X] view posts
-[X] view individual post
+* login
+* sign up
+* post on the timeline
+* view posts
+* view individual post
 
 ## API endpoint used
 
