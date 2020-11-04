@@ -8,6 +8,14 @@
   padding: $feed-card-padding;
   @include primary-post-text;
 
+<<<<<<< HEAD
+=======
+  &:hover {
+    background-color: $textarea-border-color;
+    cursor: pointer;
+  }
+
+>>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
   &__header {
     display: flex;
     align-items: center;

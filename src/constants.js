@@ -1,4 +1,5 @@
 export const BASE_API_URL = "https://jsonplaceholder.typicode.com";
+<<<<<<< HEAD
 
 export const DUMMY_USER_IMAGES = [
   {
@@ -65,3 +66,5 @@ export const DUMMY_USER_IMAGES = [
     last_updated: '5h'
   },
 ];
+=======
+>>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600

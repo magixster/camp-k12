@@ -17,10 +17,9 @@
 
 .feedsContainer {
   flex:1;
-  background-color: $primary-feed-bg;
   overflow: auto;
   padding: $feed-card-padding;
-  margin-top: 12rem;
+  margin-top: 1.25rem;
 
   &__header {
     display: flex;
@@ -53,13 +52,8 @@
     padding: pxToRem(10px);
     margin-bottom: 1.375rem;
     margin-top: 1rem;
-<<<<<<< HEAD
-    line-height: 1.5;
-    font-size: 1.5rem;
-=======
     line-height: 1.57;
     font-size: 0.875rem;
->>>>>>> f5bc3019907e3d6451d28bad6a91b0fff37d0600
 
     &:focus, &:focus{
       outline: none;
