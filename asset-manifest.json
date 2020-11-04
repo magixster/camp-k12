@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/campk12/static/css/main.89ce687a.chunk.css",
-    "main.js": "/campk12/static/js/main.d713a45f.chunk.js",
-    "main.js.map": "/campk12/static/js/main.d713a45f.chunk.js.map",
-    "runtime-main.js": "/campk12/static/js/runtime-main.4342ee5f.js",
-    "runtime-main.js.map": "/campk12/static/js/runtime-main.4342ee5f.js.map",
-    "static/js/2.067a282d.chunk.js": "/campk12/static/js/2.067a282d.chunk.js",
-    "static/js/2.067a282d.chunk.js.map": "/campk12/static/js/2.067a282d.chunk.js.map",
-    "static/js/3.9a8f0568.chunk.js": "/campk12/static/js/3.9a8f0568.chunk.js",
-    "static/js/3.9a8f0568.chunk.js.map": "/campk12/static/js/3.9a8f0568.chunk.js.map",
-    "index.html": "/campk12/index.html",
-    "static/css/main.89ce687a.chunk.css.map": "/campk12/static/css/main.89ce687a.chunk.css.map",
-    "static/js/2.067a282d.chunk.js.LICENSE.txt": "/campk12/static/js/2.067a282d.chunk.js.LICENSE.txt",
-    "static/media/badge.affdf7f2.svg": "/campk12/static/media/badge.affdf7f2.svg",
-    "static/media/dollar.64e7d751.svg": "/campk12/static/media/dollar.64e7d751.svg"
+    "main.css": "/camp-k12/static/css/main.89ce687a.chunk.css",
+    "main.js": "/camp-k12/static/js/main.d713a45f.chunk.js",
+    "main.js.map": "/camp-k12/static/js/main.d713a45f.chunk.js.map",
+    "runtime-main.js": "/camp-k12/static/js/runtime-main.06c1787b.js",
+    "runtime-main.js.map": "/camp-k12/static/js/runtime-main.06c1787b.js.map",
+    "static/js/2.067a282d.chunk.js": "/camp-k12/static/js/2.067a282d.chunk.js",
+    "static/js/2.067a282d.chunk.js.map": "/camp-k12/static/js/2.067a282d.chunk.js.map",
+    "static/js/3.9a8f0568.chunk.js": "/camp-k12/static/js/3.9a8f0568.chunk.js",
+    "static/js/3.9a8f0568.chunk.js.map": "/camp-k12/static/js/3.9a8f0568.chunk.js.map",
+    "index.html": "/camp-k12/index.html",
+    "static/css/main.89ce687a.chunk.css.map": "/camp-k12/static/css/main.89ce687a.chunk.css.map",
+    "static/js/2.067a282d.chunk.js.LICENSE.txt": "/camp-k12/static/js/2.067a282d.chunk.js.LICENSE.txt",
+    "static/media/badge.affdf7f2.svg": "/camp-k12/static/media/badge.affdf7f2.svg",
+    "static/media/dollar.64e7d751.svg": "/camp-k12/static/media/dollar.64e7d751.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4342ee5f.js",
+    "static/js/runtime-main.06c1787b.js",
     "static/js/2.067a282d.chunk.js",
     "static/css/main.89ce687a.chunk.css",
     "static/js/main.d713a45f.chunk.js"
