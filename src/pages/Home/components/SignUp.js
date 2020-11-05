@@ -3,8 +3,10 @@ import styles from "./common.module.scss";
 import { Link } from "react-router-dom";
 import FormComponent from "../../../components/FormComponent";
 import { USER_LIST } from "../../../devData/users";
+import { connect } from "react-redux";
+import { userSignUp } from "../modules";
 
-const SignUpForm = ({ history }) => {
+const SignUpForm = ({ history, dispatch }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -26,7 +28,8 @@ const SignUpForm = ({ history }) => {
       if (password !== confirmPassword) {
         setFormError('Password and confirm password does not match!');
       };
-      history.push('/feeds');
+      dispatch(userSignUp({ email, password, name: fullName }));
+      history.push('/');
     }
   }
 
@@ -76,14 +79,14 @@ const SignUpForm = ({ history }) => {
   );
 };
 
-const SignUp = ({ history }) => {
+const SignUp = ({ history, dispatch }) => {
   return (
     <div className={styles.signInContainer}>
       <span className={styles.signInContainer__header_title}>Sign up</span>
       <span className={styles.signInContainer__header_title2}>
         Create Account for Camp K12
       </span>
-      <SignUpForm history={history} />
+      <SignUpForm history={history} dispatch={dispatch} />
       <div className={styles.signInContainer__link}>
         <span>
           <span className={styles.signInContainer__link_label}>
@@ -98,4 +101,4 @@ const SignUp = ({ history }) => {
   );
 };
 
-export default SignUp;
+export default connect()(SignUp);

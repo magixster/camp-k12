@@ -26,7 +26,28 @@ const userSignout = () => ({
 const INITIAL_STATE = {
   loading: false,
   user: {},
+  newUser: null,
 };
+
+// User Sign up
+const USER_SIGN_UP = "USER/SIGN_UP";
+const USER_SIGN_UP_SUCCESS = "USER/SIGN_UP/SIGN_UP_SUCCESS";
+const USER_SIGN_UP_FAILED = "USER/SIGN_UP/SIGN_UP_FAILED";
+
+const userSignUp = (data) => ({
+  type: USER_SIGN_UP,
+  data,
+});
+
+const userSignUpSuccess = (data) => ({
+  type: USER_SIGN_UP_SUCCESS,
+  data,
+});
+
+const userSignUpFailed = (err) => ({
+  type: USER_SIGN_UP_FAILED,
+  err,
+});
 
 const PlatFormUserReducer = (state, action) => {
   switch (action.type) {
@@ -52,6 +73,31 @@ const PlatFormUserReducer = (state, action) => {
   }
 };
 
+const newUserReducer = (state, action) => {
+  switch (action.type) {
+    case USER_SIGN_UP:
+      return {
+        ...state,
+        newUser: action.data,
+        loading: true,
+      };
+    case USER_SIGN_UP_SUCCESS:
+      return {
+        ...state,
+        data: action.data,
+        loading: false,
+      };
+    case USER_SIGN_UP_FAILED:
+      return {
+        ...state,
+        loading: false,
+        err: action.err,
+      };
+    default:
+      return state;
+  }
+};
+
 const UserReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case USER_SIGN_IN:
@@ -60,6 +106,13 @@ const UserReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         user: PlatFormUserReducer(state.user, action),
+      };
+    case USER_SIGN_UP:
+    case USER_SIGN_UP_SUCCESS:
+    case USER_SIGN_UP_FAILED:
+      return {
+        ...state,
+        newUser: newUserReducer(state.newUser, action),
       };
     case USER_SIGN_OUT:
       return {
@@ -73,4 +126,13 @@ const UserReducer = (state = INITIAL_STATE, action) => {
 
 export default UserReducer;
 
-export { userSignIn, userSignInSuccess, userSignInFailed, userSignout };
+export {
+  USER_SIGN_UP,
+  userSignUp,
+  userSignUpSuccess,
+  userSignUpFailed,
+  userSignIn,
+  userSignInSuccess,
+  userSignInFailed,
+  userSignout,
+};
