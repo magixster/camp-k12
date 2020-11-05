@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 
 import styles from "./FeedOverview.module.scss";
 import PostFeed from "../Feed/components/PostFeed";
-import { USER_LIST } from "../../devData/users";
 
-const FeedOverview = ({ dispatch, history, match, feedList }) => {
+const FeedOverview = ({ history, match, feedList, user, allUsers }) => {
   const feed = feedList.find((feed) => feed.id === match.params.feedId * 1);
+  debugger;
   return (
     <div className={styles.feedsWrapper}>
       <div className={styles.bg}>
@@ -26,7 +26,7 @@ const FeedOverview = ({ dispatch, history, match, feedList }) => {
 
         <div className={styles.feedsContainer}>
           <PostFeed
-            user={USER_LIST[feed.userId - 1]}
+            user={allUsers[feed.userId - 1]}
             key={match.params.feedId}
             feed={feed}
           />
@@ -36,8 +36,10 @@ const FeedOverview = ({ dispatch, history, match, feedList }) => {
   );
 };
 
-const mapStateToProps = ({ feeds }) => ({
+const mapStateToProps = ({ feeds, user }) => ({
   feedList: feeds.userFeeds.feeds,
+  user: user.user.data,
+  allUsers: user.allUsers.allUsers,
 });
 
 export default connect(mapStateToProps)(FeedOverview);

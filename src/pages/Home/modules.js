@@ -1,3 +1,5 @@
+import { USER_LIST } from "../../devData/users";
+
 // UserFeed
 const USER_SIGN_IN = "USER/SIGN_IN";
 const USER_SIGN_IN_SUCCESS = "USER/SIGN_IN/SIGN_IN_SUCCESS";
@@ -26,7 +28,9 @@ const userSignout = () => ({
 const INITIAL_STATE = {
   loading: false,
   user: {},
-  newUser: null,
+  allUsers: {
+    allUsers: USER_LIST
+  },
 };
 
 // User Sign up
@@ -78,13 +82,15 @@ const newUserReducer = (state, action) => {
     case USER_SIGN_UP:
       return {
         ...state,
-        newUser: action.data,
         loading: true,
       };
     case USER_SIGN_UP_SUCCESS:
       return {
         ...state,
-        data: action.data,
+        allUsers: [...USER_LIST, {
+          ...USER_LIST[0],
+          id: USER_LIST[USER_LIST.length - 1].id + 1,
+          ...action.data }],
         loading: false,
       };
     case USER_SIGN_UP_FAILED:
@@ -112,7 +118,7 @@ const UserReducer = (state = INITIAL_STATE, action) => {
     case USER_SIGN_UP_FAILED:
       return {
         ...state,
-        newUser: newUserReducer(state.newUser, action),
+        allUsers: newUserReducer(state.allUsers, action),
       };
     case USER_SIGN_OUT:
       return {

@@ -30,10 +30,10 @@ function* createNewPost(action) {
     const body = JSON.stringify({
       title: "foo",
       body: action.post,
-      userId: user.id,
+      userId: user.data.id,
     });
     const post = yield call(request, "posts",  "POST", { body });
-    const newPost = { ...post, last_updated: timeSince(new Date()), userId: 1 }
+    const newPost = { ...post, last_updated: timeSince(new Date()) }
     yield put(getUserFeedSuccess([newPost, ...posts]));
     yield put(createPostSuccess());
   } catch (e) {

@@ -8,7 +8,7 @@ import styles from "./common.module.scss";
 import { USER_LIST } from "../../../devData/users";
 import { userSignInSuccess } from "../modules";
 
-const SignInForm = ({ history, dispatch }) => {
+const SignInForm = ({ history, dispatch, allUsers }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [formError, setFormError] = useState('');
@@ -19,7 +19,7 @@ const SignInForm = ({ history, dispatch }) => {
     if (!(email || password)) {
       setFormError('Please enter email or password');
     } else {
-      const user = USER_LIST.find((user) => user.email === email);
+      const user = allUsers.find((user) => user.email === email);
       if (!user) {
         setFormError('User not found!');
         return;
@@ -67,14 +67,14 @@ const SignInForm = ({ history, dispatch }) => {
   );
 };
 
-const SignIn = ({ history, dispatch }) => {
+const SignIn = ({ history, dispatch, allUsers }) => {
   return (
     <div className={styles.signInContainer}>
       <span className={styles.signInContainer__header_title}>Sign in</span>
       <span className={styles.signInContainer__header_title2}>
         Welcome back
       </span>
-      <SignInForm dispatch={dispatch} history={history} />
+      <SignInForm allUsers={allUsers} dispatch={dispatch} history={history} />
       <div className={styles.signInContainer__link}>
         <span>
           <span className={styles.signInContainer__link_label}>
@@ -89,7 +89,11 @@ const SignIn = ({ history, dispatch }) => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  allUsers: state.user.allUsers.allUsers,
+});
+
 export default compose(
-  connect(),
+  connect(mapStateToProps),
   withRouter
 )(SignIn);
