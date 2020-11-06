@@ -7,7 +7,7 @@ import UserReducer from "../pages/Home/modules";
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['user'],
+  whitelist: ['user', 'feeds'],
 };
 
 const rootReducer = combineReducers({

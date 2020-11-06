@@ -1,0 +1,39 @@
+@mixin respond-to($breakpoint) {
+
+  @if $breakpoint == "xsmall" {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "small" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "xlarge" {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+
+}
+
+.mobile-hide {
+  @include respond-to(xsmall) {
+    display: none;
+  }
+}

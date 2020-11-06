@@ -6,7 +6,6 @@ import PostFeed from "../Feed/components/PostFeed";
 
 const FeedOverview = ({ history, match, feedList, user, allUsers }) => {
   const feed = feedList.find((feed) => feed.id === match.params.feedId * 1);
-  debugger;
   return (
     <div className={styles.feedsWrapper}>
       <div className={styles.bg}>

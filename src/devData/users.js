@@ -24,7 +24,7 @@ export const USER_LIST = [
     },
     img: "https://randomuser.me/api/portraits/men/6.jpg",
     coins: 300,
-    stage: 43,
+    stage: 4,
     last_updated: '5h'
   },
   {
@@ -51,7 +51,7 @@ export const USER_LIST = [
       "bs": "synergize scalable supply-chains"
     },
     img: "https://randomuser.me/api/portraits/men/21.jpg",
-    coins: 300,
+    coins: 320,
     stage: 43,
     last_updated: '24h'
   },
@@ -79,7 +79,7 @@ export const USER_LIST = [
       "bs": "e-enable strategic applications"
     },
     img: "https://randomuser.me/api/portraits/men/9.jpg",
-    coins: 300,
+    coins: 120,
     stage: 43,
     last_updated: '8d'
   },
@@ -107,8 +107,8 @@ export const USER_LIST = [
       "bs": "transition cutting-edge web services"
     },
     img: "https://randomuser.me/api/portraits/men/34.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 45,
+    stage: 66,
     last_updated: '3h'
   },
   {
@@ -135,8 +135,8 @@ export const USER_LIST = [
       "bs": "revolutionize end-to-end systems"
     },
     img: "https://randomuser.me/api/portraits/men/4.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 122,
+    stage: 11,
     last_updated: '4d'
   },
   {
@@ -163,8 +163,8 @@ export const USER_LIST = [
       "bs": "e-enable innovative applications"
     },
     img: "https://randomuser.me/api/portraits/men/3.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 333,
+    stage: 32,
     last_updated: '7h'
   },
   {
@@ -191,8 +191,8 @@ export const USER_LIST = [
       "bs": "generate enterprise e-tailers"
     },
     img: "https://randomuser.me/api/portraits/men/44.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 654,
+    stage: 111,
     last_updated: '5h'
   },
   {
@@ -219,8 +219,8 @@ export const USER_LIST = [
       "bs": "e-enable extensible e-tailers"
     },
     img: "https://randomuser.me/api/portraits/men/41.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 21,
+    stage: 1,
     last_updated: '5h'
   },
   {
@@ -247,8 +247,8 @@ export const USER_LIST = [
       "bs": "aggregate real-time technologies"
     },
     img: "https://randomuser.me/api/portraits/men/12.jpg",
-    coins: 300,
-    stage: 43,
+    coins: 112,
+    stage: 33,
     last_updated: '5h'
   },
   {
@@ -275,8 +275,8 @@ export const USER_LIST = [
       "bs": "target end-to-end models"
     },
       img: "https://randomuser.me/api/portraits/men/6.jpg",
-      coins: 300,
-      stage: 43,
+      coins: 54,
+      stage: 65,
       last_updated: '5h'
   }
 ];

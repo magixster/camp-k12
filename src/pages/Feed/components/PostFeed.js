@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./PostFeed.module.scss";
 import dollarImage from "../../../assets/images/dollar.svg";
 import badgeImage from "../../../assets/images/badge.svg";
+import { timeSince } from "../../../utils";
 
 const PostFeed = ({ feed: { body, last_updated }, user, onClick }) => (
   <div className={styles.postContainer} onClick={onClick}>
@@ -18,7 +19,7 @@ const PostFeed = ({ feed: { body, last_updated }, user, onClick }) => (
         <img height={15} width={15} src={dollarImage} alt='dollar' />
         <span style={{ marginLeft: "4px" }}>{user.coins}</span>
       </div>
-      <span>{last_updated || user.last_updated}</span>
+      <span>{last_updated ? timeSince(last_updated) : user.last_updated}</span>
     </div>
     <div className={styles.postContainer__body}>{body}</div>
   </div>

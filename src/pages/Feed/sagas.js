@@ -1,6 +1,6 @@
 import { call, put, takeLatest, select } from "redux-saga/effects";
 import request from "../../utils/request";
-import { shuffle } from 'lodash';
+import { shuffle } from "lodash";
 import {
   GET_USER_FEED,
   getUserFeedSuccess,
@@ -9,15 +9,15 @@ import {
   createPostSuccess,
   createPostFailed,
 } from "./modules";
-import { timeSince } from "../../utils";
 
-export const getLoggedInUserSelector = (state) => state.user.user
+export const getLoggedInUserSelector = (state) => state.user.user;
 export const getAllPostsSelector = (state) => state.feeds.userFeeds.feeds;
 
 function* getUserFeeds() {
   try {
     const posts = yield call(request, "posts");
-    yield put(getUserFeedSuccess(shuffle(posts)));
+    const savedPosts = yield select(getAllPostsSelector);
+    yield put(getUserFeedSuccess([...savedPosts, ...shuffle(posts)]));
   } catch (e) {
     yield put(getUserFeedFailed(e));
   }
@@ -28,12 +28,16 @@ function* createNewPost(action) {
     let user = yield select(getLoggedInUserSelector);
     const posts = yield select(getAllPostsSelector);
     const body = JSON.stringify({
-      title: "foo",
+      title: "Test Title",
       body: action.post,
       userId: user.data.id,
     });
-    const post = yield call(request, "posts",  "POST", { body });
-    const newPost = { ...post, last_updated: timeSince(new Date()) }
+    const post = yield call(request, "posts", "POST", { body });
+    const newPost = {
+      ...post,
+      id: Date.now(),
+      last_updated: Date.now(),
+    };
     yield put(getUserFeedSuccess([newPost, ...posts]));
     yield put(createPostSuccess());
   } catch (e) {
