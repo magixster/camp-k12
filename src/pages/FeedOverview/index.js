@@ -28,6 +28,7 @@ const FeedOverview = ({ history, match, feedList, user, allUsers }) => {
             user={allUsers[feed.userId - 1]}
             key={match.params.feedId}
             feed={feed}
+            isOnPostOverview={match.params.feedId}
           />
         </div>
       </div>
